@@ -20,7 +20,7 @@ function App() {
           I'm a full stack developer based in <strong>Sydney, Australia</strong>
           .
         </p>
-        <p>Github Icon</p>
+        <p>Git Icon</p>
         <p>LinkedIn Icon</p>
         <img src={sydney} alt="Sydney"></img>
       </div>
