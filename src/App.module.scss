@@ -7,37 +7,44 @@
     margin-bottom: 24px;
     font-weight: 700;
     font-size: 42px;
+    font-family: "Montserrat", sans-serif;
   }
   h2 {
     margin-bottom: 16px;
     font-weight: 700;
     font-size: 32px;
+    font-family: "Montserrat", sans-serif;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
   }
   p {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     font-size: 16px;
+    font-family: "Inconsolata", monospace;
   }
 }
 .container {
   width: calc(100vw - 96px);
-  max-width: 680px;
+  max-width: 640px;
 }
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  margin: 48px 0px;
+  margin-top: 36px;
+  margin-bottom: 48px;
 
   h3 {
-    font-size: 18px;
-    font-weight: 600;
-
     &:hover {
       cursor: pointer;
     }
   }
   ul li {
+    font-size: 16px;
     display: inline-block;
     margin-left: 20px;
 
@@ -48,10 +55,11 @@
 }
 .landingContainer {
   position: relative;
-  margin: 12px 0px 96px 0px;
+  margin-bottom: 196px;
 
   img {
     width: 400px;
+
     // max-width: 800px;
 
     position: absolute;
@@ -59,9 +67,49 @@
     right: 0;
     opacity: 0.2;
   }
+  .icon {
+    height: 18px;
+    width: 18px;
+    margin: 6px 8px;
+    color: black;
+    :hover {
+      cursor: pointer;
+    }
+  }
 }
 .aboutMeContainer {
+  position: relative;
   margin-bottom: 96px;
+
+  .skills {
+    display: flex;
+    justify-content: center;
+
+    ul {
+      margin: 0px 40px;
+      li {
+        position: relative;
+        list-style: none;
+        padding-left: 18px;
+      }
+      li::before {
+        content: "▹";
+        position: absolute;
+        left: 0px;
+        color: black;
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+  }
+  .background {
+    position: absolute;
+    background-color: rgba(245, 245, 220, 0);
+    top: -16px;
+    left: -48px;
+    height: calc(100% + 24px + 24px);
+    width: calc(100% + 48px + 48px);
+  }
 }
 .projectsContainer {
   margin-bottom: 96px;

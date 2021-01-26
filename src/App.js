@@ -1,9 +1,17 @@
 import styles from "./App.module.scss";
 import sydney from "./sydney2.jpg";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+library.add(fab, fas);
+
 function App() {
   return (
     <div className={styles.app}>
+      {/* Navbar */}
       <nav className={`${styles.nav} ${styles.container}`}>
         <h3>MTU</h3>
         <ul>
@@ -12,6 +20,8 @@ function App() {
           <li>Contact</li>
         </ul>
       </nav>
+
+      {/* Landing/Introduction */}
       <div className={`${styles.landingContainer} ${styles.container}`}>
         <h1>
           Hi 👋, I'm <span className={styles.name}>Michael</span>
@@ -20,10 +30,21 @@ function App() {
           I'm a full stack developer based in <strong>Sydney, Australia</strong>
           .
         </p>
-        <p>Git Icon</p>
-        <p>LinkedIn Icon</p>
+        <div>
+          <a href="https://github.com/mtu2" title="GitHub">
+            <FontAwesomeIcon icon={["fab", "github"]} className={styles.icon} />
+          </a>
+          <a href="www.linkedin.com/in/tu-michael" title="LinkedIn">
+            <FontAwesomeIcon
+              icon={["fab", "linkedin"]}
+              className={styles.icon}
+            />
+          </a>
+        </div>
         <img src={sydney} alt="Sydney"></img>
       </div>
+
+      {/* About Me */}
       <div className={`${styles.aboutMeContainer} ${styles.container}`}>
         <h2>About Me</h2>
         <p>
@@ -40,36 +61,76 @@ function App() {
           mathematical side into a meaningful career in tech.
         </p>
         <p>What I've been working with lately...</p>
-        <ul>
-          <li>HTML, CSS/SCSS</li>
-          <li>Javascript</li>
-          <li>React</li>
-          <li>Node</li>
-          <li>Express.js</li>
-        </ul>
-        <ul>
-          <li>LinkedIn Icon</li>
-          <li>MongoDB</li>
-          <li>Python</li>
-          <li>Java</li>
-        </ul>
+        <div className={`${styles.skills}`}>
+          <ul>
+            <li>HTML & CSS/SCSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>React & Redux</li>
+          </ul>
+          <ul>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>MongoDB</li>
+            <li>MySQL</li>
+          </ul>
+          <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>Git</li>
+            <li>Heroku</li>
+          </ul>
+        </div>
+        <div className={styles.background} />
       </div>
+
+      {/* Projects */}
       <div className={`${styles.projectsContainer} ${styles.container}`}>
         <h2>Projects</h2>
-        <p>Pomodoro project</p>
-        <p>Simple definition</p>
-        <p>Chrome extension</p>
-        <p>Algorithm illustration</p>
-
-        <h2>Reach Out</h2>
-        <p>I'm always down for a coffee chat.</p>
-        <p>
-          Feel free to reach out to me either by email at{" "}
-          <span className={styles.email}>2.michaeltu@gmail.com</span> or on
-          social media
-        </p>
-        <p>Github Icon</p>
-        <p>LinkedIn Icon</p>
+        <div className={styles.project}>
+          <h3>Pomodoro</h3>
+          <p></p>
+          <div>
+            <FontAwesomeIcon icon={["fab", "github"]} className={styles.icon} />
+            <FontAwesomeIcon
+              icon={["fab", "linkedin"]}
+              className={styles.icon}
+            />
+            <div>
+              <a href="https://github.com/mtu2" title="GitHub">
+                <FontAwesomeIcon
+                  icon={["fab", "github"]}
+                  className={styles.icon}
+                />
+              </a>
+              <a href="www.linkedin.com/in/tu-michael" title="LinkedIn">
+                <FontAwesomeIcon
+                  icon={["fab", "linkedin"]}
+                  className={styles.icon}
+                />
+              </a>
+            </div>
+          </div>
+          <h3>SimpleDef</h3>
+          <h3>Chrome extension</h3>
+          <p>Algorithm illustration</p>
+          <h2>Reach Out</h2>
+          <p>I'm always down for a coffee chat.</p>
+          <p>
+            Feel free to reach out to me either by email at{" "}
+            <span className={styles.email}>2.michaeltu@gmail.com</span> or on
+            social media
+          </p>
+          <a href="https://github.com/mtu2" title="GitHub">
+            <FontAwesomeIcon icon={["fab", "github"]} className={styles.icon} />
+          </a>{" "}
+          <a href="www.linkedin.com/in/tu-michael" title="LinkedIn">
+            <FontAwesomeIcon
+              icon={["fab", "linkedin"]}
+              className={styles.icon}
+            />
+          </a>
+        </div>
       </div>
     </div>
   );
