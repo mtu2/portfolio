@@ -13,7 +13,7 @@ function App() {
     <div className={styles.app}>
       {/* Navbar */}
       <nav className={`${styles.nav} ${styles.container}`}>
-        <h3>MTU</h3>
+        <p>MTU</p>
         <ul>
           <li>About</li>
           <li>Projects</li>
@@ -30,7 +30,7 @@ function App() {
           I'm a full stack developer based in <strong>Sydney, Australia</strong>
           .
         </p>
-        <div>
+        <div className={styles.socialIcons}>
           <a href="https://github.com/mtu2" title="GitHub">
             <FontAwesomeIcon icon={["fab", "github"]} className={styles.icon} />
           </a>
@@ -72,65 +72,88 @@ function App() {
             <li>Node.js</li>
             <li>Express</li>
             <li>MongoDB</li>
-            <li>MySQL</li>
           </ul>
           <ul>
             <li>Python</li>
             <li>Java</li>
             <li>Git</li>
-            <li>Heroku</li>
           </ul>
         </div>
-        <div className={styles.background} />
       </div>
 
       {/* Projects */}
       <div className={`${styles.projectsContainer} ${styles.container}`}>
         <h2>Projects</h2>
         <div className={styles.project}>
-          <h3>Pomodoro</h3>
-          <p></p>
-          <div>
-            <FontAwesomeIcon icon={["fab", "github"]} className={styles.icon} />
-            <FontAwesomeIcon
-              icon={["fab", "linkedin"]}
-              className={styles.icon}
-            />
+          <div className={styles.projectTitle}>
+            <h3>Pomodoro</h3>
             <div>
+              <a href="http://mtu-pomodoro.herokuapp.com/" title="Pomodoro">
+                <FontAwesomeIcon
+                  icon={["fas", "external-link-alt"]}
+                  className={styles.icon}
+                />
+              </a>
               <a href="https://github.com/mtu2" title="GitHub">
                 <FontAwesomeIcon
                   icon={["fab", "github"]}
                   className={styles.icon}
                 />
               </a>
-              <a href="www.linkedin.com/in/tu-michael" title="LinkedIn">
+            </div>
+          </div>
+          <p>
+            Track your work using a fully customisable pomodoro-based timer
+            system. Create an account and sync your work across multiple
+            devices.
+          </p>
+          <code>
+            HTML, CSS/SCSS, JavaScript, React, Node.js, Express, MongoDB, OAuth
+          </code>
+        </div>
+        <div className={styles.project}>
+          <div className={styles.projectTitle}>
+            <h3>How bad is your code?</h3>
+            <div>
+              <a
+                href="https://chrome.google.com/webstore/detail/how-bad-is-your-code/imhffphhfhhmdohjflcnahlnjcoogafk?hl=en/"
+                title="How bad is your code? - Chrome Webstore"
+              >
                 <FontAwesomeIcon
-                  icon={["fab", "linkedin"]}
+                  icon={["fas", "external-link-alt"]}
+                  className={styles.icon}
+                />
+              </a>
+              <a href="https://github.com/mtu2" title="GitHub">
+                <FontAwesomeIcon
+                  icon={["fab", "github"]}
                   className={styles.icon}
                 />
               </a>
             </div>
           </div>
-          <h3>SimpleDef</h3>
-          <h3>Chrome extension</h3>
-          <p>Algorithm illustration</p>
-          <h2>Reach Out</h2>
-          <p>I'm always down for a coffee chat.</p>
           <p>
-            Feel free to reach out to me either by email at{" "}
-            <span className={styles.email}>2.michaeltu@gmail.com</span> or on
-            social media
+            A chrome extension that visualises all your visits and bookmarks to
+            stackoverflow.com. Add additional websites to keep track of as well
+            as your Stack Overflow user id to see more of your usage stats.
           </p>
-          <a href="https://github.com/mtu2" title="GitHub">
-            <FontAwesomeIcon icon={["fab", "github"]} className={styles.icon} />
-          </a>{" "}
-          <a href="www.linkedin.com/in/tu-michael" title="LinkedIn">
-            <FontAwesomeIcon
-              icon={["fab", "linkedin"]}
-              className={styles.icon}
-            />
-          </a>
+          <code>HTML, CSS/SCSS, JavaScript, jQuery, Chrome API</code>
         </div>
+        <div className={styles.project}>
+          <div className={styles.projectTitle}>
+            <h3>Other projects...</h3>
+          </div>
+        </div>
+      </div>
+
+      <div className={`${styles.reachOutContainer} ${styles.container}`}>
+        <h2>Reach Out</h2>
+        <p>
+          I'm always down for a coffee chat. Feel free to reach out to me either
+          by email at{" "}
+          <span className={styles.email}>2.michaeltu@gmail.com</span> or on
+          social media.
+        </p>
       </div>
     </div>
   );

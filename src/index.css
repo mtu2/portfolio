@@ -12,12 +12,8 @@
   margin: 0;
   box-sizing: border-box;
 }
-/* html {
-  font-family: "Inter", sans-serif;
-} */
-
 html {
-  font-family: "Inconsolata", monospace;
+  font-family: "Inter", sans-serif;
 }
 body {
   background-color: #ffffff;
