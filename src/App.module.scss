@@ -132,16 +132,21 @@ ul li {
 /* About Me Section */
 .aboutMeContainer {
   .skills {
-    display: flex;
-    justify-content: center;
-
     ul {
+      display: grid;
+      column-gap: 40px;
+      grid-auto-flow: column;
+      grid-template-rows: repeat(4, auto);
+      grid-template-columns: repeat(3, auto);
+
       margin: 0px 40px;
+
       li {
         position: relative;
         list-style: none;
         padding-left: 18px;
       }
+
       li::before {
         content: "▹";
         position: absolute;
@@ -150,12 +155,20 @@ ul li {
         font-size: 16px;
         line-height: 16px;
       }
+
       @include max-width-small {
         margin: 0px 20px;
         li::before {
           font-size: 15px;
           line-height: 15px;
         }
+      }
+
+      @include max-width-smaller {
+        grid-auto-flow: column;
+        column-gap: 20px;
+        grid-template-rows: repeat(6, auto);
+        grid-template-columns: repeat(2, auto);
       }
     }
   }

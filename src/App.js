@@ -71,17 +71,14 @@ function App() {
         <p>What I've been working with lately...</p>
         <div className={`${styles.skills}`}>
           <ul>
-            <li>HTML & CSS/SCSS</li>
+            <li>HTML & (S)CSS</li>
             <li>JavaScript</li>
             <li>TypeScript</li>
             <li>React & Redux</li>
-          </ul>
-          <ul>
             <li>Node.js</li>
             <li>Express</li>
             <li>MongoDB</li>
-          </ul>
-          <ul>
+            <li>PostgreSQL</li>
             <li>Python</li>
             <li>Java</li>
             <li>Git</li>
