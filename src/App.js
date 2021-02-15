@@ -1,5 +1,5 @@
 import styles from "./App.module.scss";
-import sydney from "./sydney2.jpg";
+import pomodoroScreenshot from "./pomodoro-screenshot.png";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
@@ -11,42 +11,50 @@ library.add(fab, fas);
 function App() {
   return (
     <div className={styles.app}>
-      {/* Navbar */}
-      <nav className={`${styles.nav} ${styles.container}`}>
-        <p>MTU</p>
-        <ul>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
-
       {/* Landing/Introduction */}
       <div className={`${styles.landingContainer} ${styles.container}`}>
-        <h1>
-          Hi 👋, I'm <span className={styles.name}>Michael</span>
-        </h1>
-        <p>
-          I'm a full stack developer based in <strong>Sydney, Australia</strong>
-          .
-        </p>
-        <div className={styles.socialIcons}>
-          <a href="https://github.com/mtu2" title="GitHub">
-            <FontAwesomeIcon icon={["fab", "github"]} className={styles.icon} />
-          </a>
-          <a href="www.linkedin.com/in/tu-michael" title="LinkedIn">
-            <FontAwesomeIcon
-              icon={["fab", "linkedin"]}
-              className={styles.icon}
-            />
-          </a>
+        <div className={styles.intro}>
+          <img
+            alt="LinkedIn"
+            src="https://media-exp1.licdn.com/dms/image/C4D03AQFOZPwTmkBXIw/profile-displayphoto-shrink_800_800/0/1587538300231?e=1619049600&v=beta&t=5i7meG2J4PSZCXgSu2lCClCLgLMwUsbhVo6Ow8Nwu8E"
+          />
+          <div>
+            <div className={styles.name}>
+              <h1>michael tu</h1>
+              <div className={styles.socialIcons}>
+                <a href="https://github.com/mtu2" title="GitHub">
+                  <FontAwesomeIcon
+                    icon={["fab", "github"]}
+                    className={styles.icon}
+                  />
+                </a>
+                <a href="www.linkedin.com/in/tu-michael" title="LinkedIn">
+                  <FontAwesomeIcon
+                    icon={["fab", "linkedin"]}
+                    className={styles.icon}
+                  />
+                </a>
+              </div>
+            </div>
+            <p>
+              Hi 👋, I'm Michael. I'm a full stack developer based in{" "}
+              <strong>Sydney, Australia</strong>.
+            </p>
+          </div>
         </div>
-        <img src={sydney} alt="Sydney"></img>
+
+        <nav className={styles.nav}>
+          <ul>
+            <li>about</li>
+            <li>projects</li>
+            <li>contact</li>
+          </ul>
+        </nav>
       </div>
 
       {/* About Me */}
       <div className={`${styles.aboutMeContainer} ${styles.container}`}>
-        <h2>About Me</h2>
+        <h2>🤷 about me</h2>
         <p>
           I'm a student at the University of Melbourne currently studying a{" "}
           <strong>Bachelor of Commerce</strong>, majoring in Finance and
@@ -83,7 +91,7 @@ function App() {
 
       {/* Projects */}
       <div className={`${styles.projectsContainer} ${styles.container}`}>
-        <h2>Projects</h2>
+        <h2>👨‍💻 projects</h2>
         <div className={styles.project}>
           <div className={styles.projectTitle}>
             <h3>Pomodoro</h3>
@@ -110,6 +118,7 @@ function App() {
           <code>
             HTML, CSS/SCSS, JavaScript, React, Node.js, Express, MongoDB, OAuth
           </code>
+          <img src={pomodoroScreenshot} alt="Pomodoro Screenshot" />
         </div>
         <div className={styles.project}>
           <div className={styles.projectTitle}>
@@ -146,8 +155,9 @@ function App() {
         </div>
       </div>
 
+      {/* Reach Out */}
       <div className={`${styles.reachOutContainer} ${styles.container}`}>
-        <h2>Reach Out</h2>
+        <h2>💬 reach out</h2>
         <p>
           I'm always down for a coffee chat. Feel free to reach out to me either
           by email at{" "}
@@ -155,6 +165,24 @@ function App() {
           social media.
         </p>
       </div>
+
+      {/* Footer */}
+      <footer className={styles.container}>
+        <p>
+          <strong>©️ 2021, Michael Tu 💖</strong>
+        </p>
+        <div className={styles.footerIcons}>
+          <a href="https://github.com/mtu2" title="GitHub">
+            <FontAwesomeIcon icon={["fab", "github"]} className={styles.icon} />
+          </a>
+          <a href="www.linkedin.com/in/tu-michael" title="LinkedIn">
+            <FontAwesomeIcon
+              icon={["fab", "linkedin"]}
+              className={styles.icon}
+            />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }

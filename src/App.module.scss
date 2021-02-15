@@ -1,33 +1,36 @@
 /* Variables */
-$font-color-light-mode: #000000;
+$font-color-light-mode: #252525;
 $font-color-dark-mode: #ffffff;
 $bg-color-light-mode: #ffffff;
 $bg-color-dark-mode: #29272a;
 
 /* Default Styling */
 h1 {
-  margin-bottom: 24px;
   font-weight: 700;
   font-size: 42px;
-  font-family: "Inter", sans-serif;
+  font-family: "Space Mono", monospace;
+  // font-family: "Inter", sans-serif;
 }
 h2 {
   margin-bottom: 16px;
   font-weight: 700;
   font-size: 32px;
-  font-family: "Inter", sans-serif;
+  font-family: "Space Mono", monospace;
+  // font-family: "Inter", sans-serif;
 }
 h3 {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 18px;
-  font-family: "Inter", sans-serif;
+  font-family: "Space Mono", monospace;
+  // font-family: "Inter", sans-serif;
 }
 p {
   margin-bottom: 12px;
   font-size: 16px;
   line-height: 24px;
-  font-family: "Inter", sans-serif;
+  font-family: "Space Mono", monospace;
+  // font-family: "Inter", sans-serif;
 }
 
 /* App */
@@ -35,66 +38,71 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  margin-top: 72px;
 }
 .container {
   width: calc(100vw - 96px);
   max-width: 680px;
-  margin-bottom: 72px;
+  margin-bottom: 56px;
 }
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  margin: 48px 0 72px 0px;
-
-  p {
-    font-weight: 700;
-    margin: 0;
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  ul li {
-    display: inline-block;
-    font-size: 16px;
-    margin-left: 20px;
-
-    &:hover {
-      cursor: pointer;
-    }
+.icon {
+  margin-right: 16px;
+  color: $font-color-light-mode;
+  :hover {
+    cursor: pointer;
   }
 }
 
+/* Landing Section */
 .landingContainer {
-  position: relative;
-  height: 328px;
+  .intro {
+    display: flex;
+    align-items: center;
 
-  p {
-    margin-bottom: 20px;
+    img {
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      border: 1px $font-color-light-mode solid;
+      margin-right: 28px;
+    }
+
+    .name {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 8px;
+
+      h1 {
+        margin-right: 32px;
+      }
+    }
+    .socialIcons {
+      margin-bottom: 10px; // for bottom of 42px Space Mono font
+
+      .icon {
+        height: 20px;
+        width: 20px;
+      }
+    }
   }
-  .socialIcons {
-    .icon {
-      height: 20px;
-      width: 20px;
-      margin-right: 16px;
-      color: black;
-      :hover {
+  .nav {
+    text-align: right;
+
+    ul li {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 700;
+      margin-left: 20px;
+
+      &:hover {
         cursor: pointer;
       }
     }
   }
-  img {
-    width: 460px;
-    // max-width: 800px;
-
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    opacity: 0.3;
-  }
 }
+
+/* About Me Section */
 .aboutMeContainer {
   .skills {
     display: flex;
@@ -111,13 +119,15 @@ p {
         content: "▹";
         position: absolute;
         left: 0px;
-        color: black;
+        color: $font-color-light-mode;
         font-size: 16px;
         line-height: 16px;
       }
     }
   }
 }
+
+/* Projects Section */
 .projectsContainer {
   .project {
     margin-bottom: 32px;
@@ -142,8 +152,33 @@ p {
       background-color: #e7e7e7;
       border-radius: 4px;
 
-      font-family: "Inconsolata", monospace;
-      font-size: 14px;
+      font-family: "Space Mono", monospace;
+      font-size: 12px;
+    }
+    img {
+      width: 100%;
+      filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.1));
+      border-radius: 16px;
+    }
+  }
+}
+
+/* Footer */
+footer {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+
+  p {
+    font-size: 14px;
+  }
+  .footerIcons {
+    margin-right: 16px;
+
+    .icon {
+      height: 16px;
+      width: 16px;
     }
   }
 }
