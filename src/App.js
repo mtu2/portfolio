@@ -13,43 +13,39 @@ function App() {
     <div className={styles.app}>
       {/* Landing/Introduction */}
       <div className={`${styles.landingContainer} ${styles.container}`}>
-        <div className={styles.intro}>
-          <img
-            alt="LinkedIn"
-            src="https://media-exp1.licdn.com/dms/image/C4D03AQFOZPwTmkBXIw/profile-displayphoto-shrink_800_800/0/1587538300231?e=1619049600&v=beta&t=5i7meG2J4PSZCXgSu2lCClCLgLMwUsbhVo6Ow8Nwu8E"
-          />
-          <div>
-            <div className={styles.name}>
-              <h1>michael tu</h1>
-              <div className={styles.socialIcons}>
-                <a href="https://github.com/mtu2" title="GitHub">
-                  <FontAwesomeIcon
-                    icon={["fab", "github"]}
-                    className={styles.icon}
-                  />
-                </a>
-                <a href="www.linkedin.com/in/tu-michael" title="LinkedIn">
-                  <FontAwesomeIcon
-                    icon={["fab", "linkedin"]}
-                    className={styles.icon}
-                  />
-                </a>
-              </div>
-            </div>
-            <p>
-              Hi 👋, I'm Michael. I'm a full stack developer based in{" "}
-              <strong>Sydney, Australia</strong>.
-            </p>
+        <img
+          alt="LinkedIn"
+          src="https://media-exp1.licdn.com/dms/image/C4D03AQFOZPwTmkBXIw/profile-displayphoto-shrink_800_800/0/1587538300231?e=1619049600&v=beta&t=5i7meG2J4PSZCXgSu2lCClCLgLMwUsbhVo6Ow8Nwu8E"
+        />
+        <div className={styles.name}>
+          <h1>michael tu</h1>
+          <div className={styles.socialIcons}>
+            <a href="https://github.com/mtu2" title="GitHub">
+              <FontAwesomeIcon
+                icon={["fab", "github"]}
+                className={styles.icon}
+              />
+            </a>
+            <a href="www.linkedin.com/in/tu-michael" title="LinkedIn">
+              <FontAwesomeIcon
+                icon={["fab", "linkedin"]}
+                className={styles.icon}
+              />
+            </a>
           </div>
         </div>
+        <p>
+          Hi 👋, I'm Michael. I'm a full stack developer based in{" "}
+          <strong>Sydney, Australia</strong>.
+        </p>
 
-        <nav className={styles.nav}>
+        <div className={styles.nav}>
           <ul>
             <li>about</li>
             <li>projects</li>
             <li>contact</li>
           </ul>
-        </nav>
+        </div>
       </div>
 
       {/* About Me */}

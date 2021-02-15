@@ -60,6 +60,13 @@ ul li {
   align-items: center;
 
   margin-top: 72px;
+
+  @include max-width-small {
+    margin-top: 64px;
+  }
+  @include max-width-smaller {
+    margin-top: 48px;
+  }
 }
 .container {
   width: 90%;
@@ -76,52 +83,61 @@ ul li {
 
 /* Landing Section */
 .landingContainer {
-  .intro {
-    display: flex;
-    align-items: center;
+  display: grid;
+  grid-template-areas: "photo full-name" "photo intro" "nav-bar nav-bar";
 
-    img {
-      width: 112px;
-      height: 112px;
-      border-radius: 50%;
-      border: 1px $font-color-light-mode solid;
-      margin-right: 28px;
+  img {
+    grid-area: photo;
+    align-self: center;
+
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    border: 1px $font-color-light-mode solid;
+    margin-right: 28px;
+
+    @include max-width-small {
+      width: 104px;
+      height: 104px;
+    }
+    @include max-width-smaller {
+      width: 96px;
+      height: 96px;
+    }
+  }
+
+  .name {
+    grid-area: full-name;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 8px;
+
+    h1 {
+      margin-right: 32px;
+      @include max-width-small {
+        margin-right: 0px;
+      }
     }
 
-    .name {
-      display: flex;
-      align-items: flex-end;
-      margin-bottom: 8px;
-
-      h1 {
-        margin-right: 32px;
-
-        @include max-width-small {
-          margin-right: 0px;
-        }
+    .socialIcons {
+      margin-bottom: 10px; // for bottom of 42px Space Mono font
+      .icon {
+        height: 20px;
+        width: 20px;
       }
-      .socialIcons {
-        margin-bottom: 10px; // for bottom of 42px Space Mono font
-
-        .icon {
-          height: 20px;
-          width: 20px;
-        }
-
-        @include max-width-small {
-          display: none;
-        }
+      @include max-width-small {
+        display: none;
       }
     }
   }
   .nav {
+    grid-area: nav-bar;
     text-align: right;
 
     ul li {
       display: inline-block;
       font-weight: 700;
       margin-left: 20px;
-
       &:hover {
         cursor: pointer;
       }
@@ -134,12 +150,10 @@ ul li {
   .skills {
     ul {
       display: grid;
-      column-gap: 40px;
       grid-auto-flow: column;
       grid-template-rows: repeat(4, auto);
       grid-template-columns: repeat(3, auto);
-
-      margin: 0px 40px;
+      column-gap: 40px;
 
       li {
         position: relative;
@@ -166,9 +180,9 @@ ul li {
 
       @include max-width-smaller {
         grid-auto-flow: column;
-        column-gap: 20px;
         grid-template-rows: repeat(6, auto);
         grid-template-columns: repeat(2, auto);
+        column-gap: 20px;
       }
     }
   }
@@ -226,6 +240,15 @@ footer {
     .icon {
       height: 16px;
       width: 16px;
+    }
+  }
+
+  &.container {
+    @include max-width-small {
+      margin-bottom: 48px; // override default margin-bottom
+    }
+    @include max-width-smaller {
+      margin-bottom: 24px; // override default margin-bottom
     }
   }
 }
