@@ -1,0 +1,10 @@
+@mixin max-width-small {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
+@mixin max-width-smaller {
+  @media screen and (max-width: 460px) {
+    @content;
+  }
+}
