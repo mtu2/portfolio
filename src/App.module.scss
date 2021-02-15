@@ -28,7 +28,13 @@ p {
 }
 ul li {
   font-size: 16px;
+  line-height: 24px;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 @include max-width-small {
   h1 {
     font-size: 38px;
@@ -120,7 +126,7 @@ ul li {
     }
 
     .socialIcons {
-      margin-bottom: 10px; // for bottom of 42px Space Mono font
+      margin-bottom: 6px; // for bottom of 42px Inconsolata font
       .icon {
         height: 20px;
         width: 20px;
@@ -167,14 +173,14 @@ ul li {
         left: 0px;
         color: $font-color-light-mode;
         font-size: 16px;
-        line-height: 16px;
+        line-height: 24px;
       }
 
       @include max-width-small {
         margin: 0px 20px;
         li::before {
           font-size: 15px;
-          line-height: 15px;
+          line-height: 22px;
         }
       }
 
@@ -213,8 +219,8 @@ ul li {
       background-color: #e7e7e7;
       border-radius: 4px;
 
-      font-family: "Space Mono", monospace;
-      font-size: 12px;
+      font-family: "Inconsolata", monospace;
+      font-size: 14px;
     }
     img {
       width: 100%;

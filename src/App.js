@@ -5,10 +5,19 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useRef } from "react";
 
 library.add(fab, fas);
 
 function App() {
+  const aboutMeRef = useRef(null);
+  const projectsRef = useRef(null);
+  const reachOutRef = useRef(null);
+
+  function scrollIntoView(ref) {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <div className={styles.app}>
       {/* Landing/Introduction */}
@@ -26,7 +35,7 @@ function App() {
                 className={styles.icon}
               />
             </a>
-            <a href="www.linkedin.com/in/tu-michael" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/tu-michael" title="LinkedIn">
               <FontAwesomeIcon
                 icon={["fab", "linkedin"]}
                 className={styles.icon}
@@ -41,15 +50,18 @@ function App() {
 
         <div className={styles.nav}>
           <ul>
-            <li>about</li>
-            <li>projects</li>
-            <li>contact</li>
+            <li onClick={() => scrollIntoView(aboutMeRef)}>about</li>
+            <li onClick={() => scrollIntoView(projectsRef)}>projects</li>
+            <li onClick={() => scrollIntoView(reachOutRef)}>contact</li>
           </ul>
         </div>
       </div>
 
       {/* About Me */}
-      <div className={`${styles.aboutMeContainer} ${styles.container}`}>
+      <div
+        ref={aboutMeRef}
+        className={`${styles.aboutMeContainer} ${styles.container}`}
+      >
         <h2>🤷 about me</h2>
         <p>
           I'm a student at the University of Melbourne currently studying a{" "}
@@ -83,7 +95,10 @@ function App() {
       </div>
 
       {/* Projects */}
-      <div className={`${styles.projectsContainer} ${styles.container}`}>
+      <div
+        ref={projectsRef}
+        className={`${styles.projectsContainer} ${styles.container}`}
+      >
         <h2>👨‍💻 projects</h2>
         <div className={styles.project}>
           <div className={styles.projectTitle}>
@@ -95,7 +110,7 @@ function App() {
                   className={styles.icon}
                 />
               </a>
-              <a href="https://github.com/mtu2" title="GitHub">
+              <a href="https://github.com/mtu2/pomodoro" title="GitHub">
                 <FontAwesomeIcon
                   icon={["fab", "github"]}
                   className={styles.icon}
@@ -126,7 +141,10 @@ function App() {
                   className={styles.icon}
                 />
               </a>
-              <a href="https://github.com/mtu2" title="GitHub">
+              <a
+                href="https://github.com/mtu2/how-bad-is-your-code"
+                title="GitHub"
+              >
                 <FontAwesomeIcon
                   icon={["fab", "github"]}
                   className={styles.icon}
@@ -149,13 +167,15 @@ function App() {
       </div>
 
       {/* Reach Out */}
-      <div className={`${styles.reachOutContainer} ${styles.container}`}>
+      <div
+        ref={reachOutRef}
+        className={`${styles.reachOutContainer} ${styles.container}`}
+      >
         <h2>💬 reach out</h2>
         <p>
-          I'm always down for a coffee chat. Feel free to reach out to me either
-          by email at{" "}
-          <span className={styles.email}>2.michaeltu@gmail.com</span> or on
-          social media.
+          I'm always down for a coffee. Feel free to reach out to me either by
+          email at <span className={styles.email}>2.michaeltu@gmail.com</span>{" "}
+          or on social media.
         </p>
       </div>
 
@@ -168,7 +188,7 @@ function App() {
           <a href="https://github.com/mtu2" title="GitHub">
             <FontAwesomeIcon icon={["fab", "github"]} className={styles.icon} />
           </a>
-          <a href="www.linkedin.com/in/tu-michael" title="LinkedIn">
+          <a href="https://www.linkedin.com/in/tu-michael" title="LinkedIn">
             <FontAwesomeIcon
               icon={["fab", "linkedin"]}
               className={styles.icon}
