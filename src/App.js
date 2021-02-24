@@ -1,5 +1,5 @@
 import styles from "./App.module.scss";
-import pomodoroScreenshot from "./pomodoro-screenshot.png";
+// import pomodoroScreenshot from "./pomodoro-screenshot.png";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
@@ -44,7 +44,7 @@ function App() {
           </div>
         </div>
         <p>
-          Hi 👋, I'm Michael. I'm a full stack developer based in{" "}
+          Hi 👋, I'm Michael. I'm a software engineer based in{" "}
           <strong>Sydney, Australia</strong>.
         </p>
 
@@ -62,19 +62,20 @@ function App() {
         ref={aboutMeRef}
         className={`${styles.aboutMeContainer} ${styles.container}`}
       >
-        <h2>🤷 about me</h2>
+        <h2>✏️ about me</h2>
         <p>
-          I'm a student at the University of Melbourne currently studying a{" "}
+          I am a student at the University of Melbourne currently studying a{" "}
           <strong>Bachelor of Commerce</strong>, majoring in Finance and
           Economics, as well as a concurrent{" "}
           <strong>Diploma in Mathematical Sciences</strong> (Statistic &
           Stochastic Processes).
         </p>
         <p>
-          Over the years I've learnt to code, and have dedicated time to learn
+          Over the years, I've learnt to code and have dedicated time to learn
           computer science and full stack development outside of my university
-          degree. I'm working towards my goal of combining my business and
-          mathematical side into a meaningful career in tech.
+          degree. I'm working towards my goal of combining my
+          business/mathematics background, with my passion for technology, into
+          a meaningful career in tech.
         </p>
         <p>What I've been working with lately...</p>
         <div className={`${styles.skills}`}>
@@ -82,7 +83,7 @@ function App() {
             <li>HTML & (S)CSS</li>
             <li>JavaScript</li>
             <li>TypeScript</li>
-            <li>React & Redux</li>
+            <li>React</li>
             <li>Node.js</li>
             <li>Express</li>
             <li>MongoDB</li>
@@ -102,7 +103,7 @@ function App() {
         <h2>👨‍💻 projects</h2>
         <div className={styles.project}>
           <div className={styles.projectTitle}>
-            <h3>Pomodoro</h3>
+            <h3>Pomotimer</h3>
             <div>
               <a href="http://mtu-pomodoro.herokuapp.com/" title="Pomodoro">
                 <FontAwesomeIcon
@@ -121,13 +122,43 @@ function App() {
           <p>
             Track your work using a fully customisable pomodoro-based timer
             system. Create an account and sync your work across multiple
-            devices.
+            devices. Pomotimer uses the MERN stack with Google OAuth to register
+            and save user data.
           </p>
-          <code>
-            HTML, CSS/SCSS, JavaScript, React, Node.js, Express, MongoDB, OAuth
-          </code>
-          <img src={pomodoroScreenshot} alt="Pomodoro Screenshot" />
+          <code>React, Node.js, Express, MongoDB, OAuth, SASS</code>
+          {/* <img src={pomodoroScreenshot} alt="Pomodoro Screenshot" /> */}
         </div>
+
+        <div className={styles.project}>
+          <div className={styles.projectTitle}>
+            <h3>Script to Print</h3>
+            <div>
+              <a
+                href="https://script-to-print.mttu.dev/"
+                title="Script to Print"
+              >
+                <FontAwesomeIcon
+                  icon={["fas", "external-link-alt"]}
+                  className={styles.icon}
+                />
+              </a>
+              <a href="https://github.com/mtu2/script-to-print" title="GitHub">
+                <FontAwesomeIcon
+                  icon={["fab", "github"]}
+                  className={styles.icon}
+                />
+              </a>
+            </div>
+          </div>
+          <p>
+            Create posters and wallpapers by combining your favourite movie
+            scripts/books/lyrics and images. Script to Print utilises the HTML5
+            Canvas API to imprint and overlay images on text via pixel
+            manipulation.
+          </p>
+          <code>TypeScript, React, SASS</code>
+        </div>
+
         <div className={styles.project}>
           <div className={styles.projectTitle}>
             <h3>How bad is your code?</h3>
@@ -155,15 +186,49 @@ function App() {
           <p>
             A chrome extension that visualises all your visits and bookmarks to
             stackoverflow.com. Add additional websites to keep track of as well
-            as your Stack Overflow user id to see more of your usage stats.
+            as your Stack Overflow user id to see more of your usage stats. This
+            extension uses the Chrome and Stack Exchange API to sort, categorise
+            and represent user's browsing history and saved bookmarks.
           </p>
-          <code>HTML, CSS/SCSS, JavaScript, jQuery, Chrome API</code>
+          <code>jQuery, Chrome API, Stack Exchange API, SASS</code>
         </div>
+
         <div className={styles.project}>
           <div className={styles.projectTitle}>
             <h3>Other projects...</h3>
           </div>
         </div>
+
+        {/* <div className={styles.project}>
+          <div className={styles.projectTitle}>
+            <h3>Simple Definition</h3>
+            <div>
+              <a
+                href="https://simple-definition.mttu.dev/"
+                title="Simple Definition"
+              >
+                <FontAwesomeIcon
+                  icon={["fas", "external-link-alt"]}
+                  className={styles.icon}
+                />
+              </a>
+              <a
+                href="https://github.com/mtu2/simple-definition"
+                title="GitHub"
+              >
+                <FontAwesomeIcon
+                  icon={["fab", "github"]}
+                  className={styles.icon}
+                />
+              </a>
+            </div>
+          </div>
+          <p>
+            A simple web app that generates random words with definitions and
+            examples.
+          </p>
+          <code>HTML/CSS, React</code>
+        </div> */}
       </div>
 
       {/* Reach Out */}
@@ -182,7 +247,7 @@ function App() {
       {/* Footer */}
       <footer className={styles.container}>
         <p>
-          <strong>©️ 2021, Michael Tu 💖</strong>
+          <strong>©️ {new Date().getFullYear()}, Michael Tu 💖</strong>
         </p>
         <div className={styles.footerIcons}>
           <a href="https://github.com/mtu2" title="GitHub">
