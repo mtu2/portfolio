@@ -152,7 +152,7 @@ function App() {
           <div className={styles.projectTitle}>
             <h3>Pomotimer</h3>
             <div>
-              <a href="https://pomotimer.herokuapp.com/" title="Pomotimer">
+              <a href="https://pomotimer.mttu.dev/" title="Pomotimer">
                 <FontAwesomeIcon
                   icon={["fas", "external-link-alt"]}
                   className={styles.icon}
@@ -173,7 +173,6 @@ function App() {
             and save user data.
           </p>
           <code>React, Node.js, Express, MongoDB, OAuth, SASS</code>
-          {/* <img src={pomodoroScreenshot} alt="Pomodoro Screenshot" /> */}
         </div>
 
         <div className={styles.project}>
