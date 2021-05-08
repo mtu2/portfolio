@@ -1,5 +1,5 @@
 import styles from "./App.module.scss";
-// import pomodoroScreenshot from "./pomodoro-screenshot.png";
+import linkedinPhoto from "./linkedin-photo.jpg";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
@@ -69,10 +69,7 @@ function App() {
     <div className={styles.app}>
       {/* Landing/Introduction */}
       <div className={`${styles.landingContainer} ${styles.container}`}>
-        <img
-          alt="LinkedIn"
-          src="https://media-exp1.licdn.com/dms/image/C4D03AQFOZPwTmkBXIw/profile-displayphoto-shrink_800_800/0/1587538300231?e=1619049600&v=beta&t=5i7meG2J4PSZCXgSu2lCClCLgLMwUsbhVo6Ow8Nwu8E"
-        />
+        <img alt="LinkedIn" src={linkedinPhoto} />
         <div className={styles.name}>
           <h1>michael tu</h1>
           <div className={styles.socialIcons}>
