@@ -134,6 +134,7 @@ function App() {
             <li>PostgreSQL</li>
             <li>Python</li>
             <li>Java</li>
+            <li>C++</li>
             <li>Git</li>
           </ul>
         </div>
